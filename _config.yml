@@ -1,3 +1,9 @@
 title: Centuria Games
 description: Official Website of the Hound of Ulster
+baseurl: ""
+url: https://thecenturiagames.github.io/CenturiaGames/
 theme: minima
+plugins:
+-jekyll-feed
+-jekyll-seo-tag
+mardown: kramdown
