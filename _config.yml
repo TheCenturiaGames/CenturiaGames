@@ -4,6 +4,6 @@ baseurl: ""
 url: https://thecenturiagames.github.io/CenturiaGames/
 theme: minima
 plugins:
--jekyll-feed
--jekyll-seo-tag
-mardown: kramdown
+  - jekyll-feed
+  - jekyll-seo-tag
+markdown: kramdown
