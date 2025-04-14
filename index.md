@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Main page
+title: Game
 ---
 
 # Welcome to Centuria Games
