@@ -13,6 +13,6 @@ title: Main page
     <li><a href="/game">Game</a></li>
     <li><a href="/engine">Engine</a></li>
     <li><a href="/blog">Blog</a></li>
-    <li><a href="/download.html">Download/a></li>
+    <li><a href="/download.html">Download</a></li>
   </ul>
 </nav>
