@@ -1,0 +1,44 @@
+---
+layout: default
+title: Meet the Team
+---
+
+  <section class="team-section">
+  <h1>Meet the Team</h1>
+
+  <div class="team-filters">
+    <button class="filter-btn active" data-role="all">
+      🛡️ All
+    </button>
+    <button class="filter-btn" data-role="coder">
+      ⚔️ Coders
+    </button>
+    <button class="filter-btn" data-role="artist">
+      🎨 Artists
+    </button>
+  </div>
+
+  <div class="team-grid">
+    {% for member in site.data.team %}
+    <div class="team-card" data-role="{{ member.role }}">
+      <div class="team-image">
+        <img src="{{ site.baseurl }}/assets/images/{{ member.image }}" alt="{{ member.name }}">
+      </div>
+      
+      <div class="team-role">{{ member.role | capitalize }}</div>
+      
+      <div class="team-social">
+        {% if member.youtube %}<a href="{{ member.youtube }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/youtube.svg" alt="YouTube"></a>{% endif %}
+        {% if member.x %}<a href="{{ member.x }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/x.svg" alt="X"></a>{% endif %}
+        {% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/linkedin.svg" alt="LinkedIn"></a>{% endif %}
+        {% if member.instagram %}<a href="{{ member.instagram }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/instagram.svg" alt="Instagram"></a>{% endif %}
+        {% if member.tiktok %}<a href="{{ member.tiktok }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/tiktok.svg" alt="TikTok"></a>{% endif %}
+        {% if member.github %}<a href="{{ member.github }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/github.svg" alt="Github"></a>{% endif %}
+        {% if member.artstation %}<a href="{{ member.artstation }}" target="_blank"><img src="{{ site.baseurl }}/assets/icons/artstation.svg" alt="Artstation"></a>{% endif %}
+      </div>
+      
+      <div class="team-name">{{ member.name }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

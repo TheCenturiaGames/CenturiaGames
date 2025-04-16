@@ -1,0 +1,15 @@
+- name: Cu Chulainn
+  description: A legendary warrior of Ulster, brave and fierce in battle, wielding the powerful Gáe Bolg.
+  image: cu_chulainn.png
+
+- name: Morrigan
+  description: The mysterious goddess of war and fate, watching and meddling from the shadows.
+  image: morrigan.png
+
+- name: Bull of Cooley
+  description: The mythical bull at the heart of the conflict, symbol of power and prize of war.
+  image: bull_cooley.png
+
+- name: Ferdiad
+  description: Cu Chulainn’s childhood friend, turned tragic rival on the battlefield.
+  image: ferdiad.png

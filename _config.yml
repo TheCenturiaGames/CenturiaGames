@@ -3,6 +3,12 @@ description: Official Website of the Hound of Ulster
 baseurl: "/CenturiaGames"
 url: "https://thecenturiagames.github.io"
 theme: minima
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
