@@ -1,0 +1,24 @@
+description: >
+  Our custom in-house engine, created as the main tool for the development of our game project The Hound of Ulster. The Engine has been developed to replicate core tools of other engines to allow a smooth workflow.
+
+features:
+  - name: Navmesh
+    description: Integrated navmesh where enemies can follow the player and create walkable terrains for the character.
+
+  - name: Batching
+    description: Optimizes rendering by combining multiple draw calls into one, improving performance.
+
+  - name: GLTF Format
+    description: Support for glTF models allows efficient, modern loading of 3D assets with PBR materials and animations.
+
+  - name: State Machines
+    description: Robust system for controlling animations and game logic via configurable state transitions.
+
+  - name: PBR Pipeline
+    description: Physically-based rendering ensures realistic materials, lighting and shading.
+
+  - name: Bullet Physics
+    description: Built-in physics integration for realistic object interactions, collisions and dynamics.
+
+  - name: Project Launcher
+    description: Custom launcher for quick project setup, scene switching and playtesting tools.

@@ -2,3 +2,48 @@
 layout: default
 title: Engine - Sobrassada Engine
 ---
+
+<section class="engine-section">
+    <div class="engine-card">
+      <div class="engine-logo">
+        <img src="{{ '/assets/images/bachicha.png' | relative_url }}" alt="Sobrassada Engine Logo">
+      </div>
+      <div class="engine-info">
+        <h2>Sobrassada Engine</h2>
+        <p>{{ site.data.engine_features.description }}</p>
+      </div>
+    </div>
+  
+    <div class="engine-features">
+      {% for feature in site.data.engine_features.features %}
+        <div class="feature">
+          <h3>{{ feature.name }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="tools-grid section-dark">
+    <h2>Tools We Use</h2>
+    <div class="grid-container">
+      {% assign tools = "Discord,Blender,Maya,C++,OpenGL,Substance Painter,Substance Designer,Photoshop,Visual Studio" | split: "," %}
+      {% for tool in tools %}
+        <div class="grid-card">
+          <img src="{{ '/assets/images/tools/' | append: tool | replace: ' ', '_' | downcase | append: '.png' | relative_url }}" alt="{{ tool }}">
+          <span>{{ tool }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="libraries">
+  <h2>Libraries We Use</h2>
+  <div class="libraries-grid">
+    {% assign libs = "Bullet,DirectXTex,Freetype,Glew,Imgui,ImGuizmo,ImNodeFlow,MathGeoLib,Rapidjson,Recast,SDL2,tinyGLTF" | split: "," %}
+    {% for lib in libs %}
+      <div class="library">
+        <span>{{ lib }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>
