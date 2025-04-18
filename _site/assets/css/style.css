@@ -2,7 +2,8 @@ body {
     background-color: #0e0e0e;
     color: #d4c9b3;
     font-family: 'Cinzel', serif;
-    background-image: url('/CenturiaGames/assets/images/texture_dark_celtic.avif');
+    /*background-image: url('/CenturiaGames/assets/images/texture_dark_celtic.avif');*/
+    background-color: #0e0e0e;
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -402,4 +403,67 @@ body {
   margin: 0.5rem 0;
   font-size: 1.2rem;
   color: #d4af37;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8));
+  background-size: cover;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #f3e8c8;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #d4af37;
+  color: #0e0e0e;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 5px #d4af37;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #d4af37;
+  color: #1a1a1a;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  margin-top: 2rem;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card-link {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  border-left: 4px solid #d4af37;
+  border-radius: 12px;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
 }
