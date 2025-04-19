@@ -36,6 +36,12 @@ body {
     text-shadow: 0 0 10px #a89c65;
   }
 
+  a,
+a:visited {
+  color: #f3e8c8;
+  text-decoration: none;
+}
+
   .footer {
     background-color: #1a1a1a;
     color: #ccc;
