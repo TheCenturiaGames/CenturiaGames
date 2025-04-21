@@ -26,7 +26,7 @@ title: Engine - Sobrassada Engine
   <section class="tools-grid section-dark">
     <h2>Tools We Use</h2>
     <div class="grid-container">
-      {% assign tools = "Discord,Blender,Maya,C++,OpenGL,Substance Painter,Substance Designer,Photoshop,Visual Studio" | split: "," %}
+      {% assign tools = "Discord,Blender,Maya,Cpp,OpenGL,Substance Painter,Substance Designer,Photoshop,Visual Studio" | split: "," %}
       {% for tool in tools %}
         <div class="grid-card">
           <img src="{{ '/assets/images/tools/' | append: tool | replace: ' ', '_' | downcase | append: '.png' | relative_url }}" alt="{{ tool }}">
