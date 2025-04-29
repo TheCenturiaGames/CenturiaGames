@@ -482,11 +482,14 @@ a:visited {
 
 .engine-card {
   display: flex;
-  background-color: #2a2a2a;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+  gap: 1rem;
 }
 
 .engine-logo {
@@ -499,14 +502,11 @@ a:visited {
 }
 
 .engine-logo img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-width: 100px;
 }
 
 .engine-info {
-  flex: 2;
-  padding: 2rem;
+  text-align: center;
 }
 
 .engine-features {
@@ -542,42 +542,64 @@ h2 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 160px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
-  justify-content: center;
+  justify-items: center;
 }
 
 .grid-card {
   background-color: #1a1a1a;
-  border-left: 4px solid #6b4e16;
+  border-radius: 10px;
   padding: 1rem;
-  border-radius: 8px;
   text-align: center;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  min-height: 160px;
+  max-width: 150px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grid-card img {
-  max-width: 48px;
-  max-height: 48px;
+  max-width: 64px;
+  max-height: 64px;
+  margin-bottom: 0.5rem;
   object-fit: contain;
-  filter: brightness(1.2);
 }
 
 .grid-card span {
-  font-size: 0.95rem;
-  font-weight: bold;
+  font-size: 1rem;
+  color: #f3d87f; 
+}
+.libraries {
+  text-align: center;
+  padding: 2rem 1rem;
 }
 .libraries-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
   gap: 1.5rem;
-  margin-top: 1rem;
+  max-width: 1000px;
+  margin: 0 auto; 
+  padding: 1rem;
+}
+.library {
+  background-color: #222;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
 }
 
+.library:hover {
+  transform: scale(1.05);
+}
 .library-card {
   background-color: #1a1a1a;
   padding: 1rem;
@@ -629,4 +651,81 @@ h2 {
 .download-link:hover {
   background-color: #2b2b2b;
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0.5em;
+  }
+
+  nav ul li {
+    margin: 0.5em 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .game-horizontal-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-image-placeholder {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    max-width: 100%;
+  }
+
+  .team-grid,
+  .characters-grid,
+  .about-grid {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .team-card,
+  .character-card,
+  .about-card {
+    max-width: 100%;
+  }
+
+  .blog-card {
+    padding: 1rem;
+  }
+
+  .about-title,
+  .blog-title {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .engine-card {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .engine-logo img {
+    margin-bottom: 1rem;
+  }
 }
