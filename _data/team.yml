@@ -1,106 +1,105 @@
 - name: Alex Lopez Agudo
-  image: user.png
+  image: people/AlexLopezAgudo.jpg
   role: artist
   github: https://github.com/AlexLA99
   linkedin: https://www.linkedin.com/in/alex-lopez-agudo-9777741a3/
   
 - name: Alex Tripiana Garcia
-  image: user.png
+  image: people/AlexTripianaGarcia.jpg
   role: artist
   github: https://github.com/tripiana22
   linkedin: https://www.linkedin.com/in/alex-tripiana-7b4413279/
 
 - name: Andreu Castaño Jimenez
-  image: user.png
+  image: people/AndreuCastanoJimenez.jpg
   role: coder
   github: https://github.com/caspi99
   linkedin: https://www.linkedin.com/in/andreu-castano-jimenez-49085a318/
 
 - name: Andreu Salvadó Béjar
-  image: user.png
+  image: people/AndreuSalvadoBejar.jpg
   role: artist
   linkedin: http://www.linkedin.com/in/andreu-salvad%C3%B3-47914927
 
 - name: Carla Collado Crespo
-  image: user.png
+  image: people/CarlaColladoCrespo.jpg
   role: artist
   artstation: https://www.artstation.com/cccrinka7
   linkedin: https://www.linkedin.com/in/carla-collado-b09428284/
   github: https://github.com/CCCarluchi
 
 - name: David Abecia Sagrega
-  image: user.png
+  image: people/DavidAbeciaSagrera.jpg
   role: artist
   artstation: https://www.artstation.com/davidabecia23
   linkedin: https://www.linkedin.com/in/david-abecia-sagrera-4b6987185/
 
+- name: Dulce M. Zapata Olivares
+  image: people/DulceZapata.jpg
+  role: coder
+  github: https://github.com/DHazardFenrir
+  linkedin: https://www.linkedin.com/in/dulce-zapata-olivares-b17a5110b/
+
 - name: Elizabeth Guerrero Mendoza
-  image: user.png
+  image: people/ElizabethGuerreroMendoza.jpg
   role: artist
   artstation: http://c_tack.artstation.com/
   linkedin: https://www.linkedin.com/in/elizabeth-gm818
 
 - name: Joan Llobert Ruiz
-  image: user.png
+  image: people/JoanLlobertRuiz.jpg
   role: coder
   github: https://github.com/srLlobet
   linkedin: http://www.linkedin.com/in/joanllobetruiz
 
 - name: Joan Martí Olivart
-  image: user.png
+  image: people/JoanMartiOlivart.jpg
   role: coder
   github: https://github.com/jmartiolivart
   linkedin: https://es.linkedin.com/in/joan-mart%C3%AD-olivart-644b3015a
 
 - name: Marc Casanova Torrequebrada
-  image: user.png
+  image: people/MarcCasanovaTorrequebrada.jpg
   role: coder
   github: https://github.com/SirKaza
   linkedin: https://www.linkedin.com/in/marc-casanova-torrequebrada/
 
 - name: Marc Lopez Serrano
-  image: user.png
+  image: people/MarcLopezSerrano.jpg
   role: coder
   github: https://github.com/MarcLopezS
   linkedin: http://www.linkedin.com/in/marc-l%C3%B3pez-491132203
   
-  
 - name: Pablo García Fuentes
-  image: user.png
+  image: people/PabloGarciaFuentes.jpg
   role: coder
   github: https://github.com/PabioGF
   linkedin: http://www.linkedin.com/in/pablo-garcia-fuentes-6699a4271
 
 - name: Pol Curto Forné
-  image: user.png
+  image: people/PolCurtoForne.jpg
   role: coder
   github: https://github.com/PolCurto
   linkedin: https://www.linkedin.com/in/pol-curto-b19773279/
 
 - name: Selin Duman
-  image: user.png
+  image: people/SelinDuman.jpg
   role: artist
   artstation: https://www.artstation.com/selinduman
   linkedin: https://www.linkedin.com/in/selin-duman-26a8a81aa/
 
 - name: Vasilije Pavlov
-  image: user.png
+  image: people/VasilijePablov.png
   role: artist
   artstation: https://www.artstation.com/vasilijepavlov8
   linkedin: https://www.linkedin.com/in/vasilije-pavlov-5a79541a2/
 
 - name: Víctor Franco Sanchez
-  image: user.png
+  image: people/VictorFrancoSanchez.jpg
   role: artist
   artstation: https://hectobreak.artstation.com/
   linkedin: https://linkedin.com/in/v%C3%ADctor-franco-sanchez/
   github: https://github.com/hectobreak/
-
-- name: Dulce M. Zapata Olivares
-  image: user.png
-  role: coder
-  github: https://github.com/DHazardFenrir
-  linkedin: https://www.linkedin.com/in/dulce-zapata-olivares-b17a5110b/
 
 - name: Cú Chulainn
   image: user.png
