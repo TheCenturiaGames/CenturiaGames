@@ -21,6 +21,12 @@
   role: artist
   linkedin: http://www.linkedin.com/in/andreu-salvad%C3%B3-47914927
 
+- name: Bartolomeu Perelló Comas
+  image: people/BartolomeuPerelloComas.jpg
+  role: coder
+  github: https://github.com/IDarkgenesis
+  linkedin: https://www.linkedin.com/in/bartomeu-perell%C3%B3-comas-89730a220
+
 - name: Carla Collado Crespo
   image: people/CarlaColladoCrespo.jpg
   role: artist
@@ -43,7 +49,7 @@
 - name: Elizabeth Guerrero Mendoza
   image: people/ElizabethGuerreroMendoza.jpg
   role: artist
-  artstation: http://c_tack.artstation.com/
+  artstation: https://c_tack.artstation.com/
   linkedin: https://www.linkedin.com/in/elizabeth-gm818
 
 - name: Joan Llobert Ruiz
@@ -57,6 +63,12 @@
   role: coder
   github: https://github.com/jmartiolivart
   linkedin: https://es.linkedin.com/in/joan-mart%C3%AD-olivart-644b3015a
+
+- name: Lukas Ganter
+  image: people/LukasGanter.jpg
+  role: coder
+  github: https://github.com/LukasGanter
+  linkedin: https://linkedin.com/
 
 - name: Marc Casanova Torrequebrada
   image: people/MarcCasanovaTorrequebrada.jpg
@@ -88,6 +100,12 @@
   artstation: https://www.artstation.com/selinduman
   linkedin: https://www.linkedin.com/in/selin-duman-26a8a81aa/
 
+- name: Sebastián Mora Rojas
+  image: people/SebastianMoraRojas.jpg
+  role: artist
+  artstation: https://www.artstation.com/loveffone
+  linkedin: https://www.linkedin.com/in/sebasmorarojas/
+
 - name: Vasilije Pavlov
   image: people/VasilijePavlov.png
   role: artist
@@ -100,22 +118,4 @@
   artstation: https://hectobreak.artstation.com/
   linkedin: https://linkedin.com/in/v%C3%ADctor-franco-sanchez/
   github: https://github.com/hectobreak/
-
-- name: Cú Chulainn
-  image: user.png
-  role: artist
-  artstation: https://artstation.com/
-  linkedin: https://linkedin.com/
-
-- name: Cú Chulainn
-  image: user.png
-  role: artist
-  artstation: https://artstation.com/
-  linkedin: https://linkedin.com/
-
-- name: Cú Chulainn
-  image: user.png
-  role: artist
-  artstation: https://artstation.com/
-  linkedin: https://linkedin.com/
   
