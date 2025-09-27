@@ -16,4 +16,16 @@
       <a href="https://tiktok.com/" target="_blank" aria-label="TikTok"><img src="/CenturiaGames/assets/icons/tiktok.svg" alt="TikTok" /></a>
       <a href="https://centuriagames.itch.io" target="_blank" aria-label="itch.io"><img src="/CenturiaGames/assets/icons/itchio.svg" alt="TikTok" /></a>
     </div>
+    <script>
+        (() => {
+            let j = null;
+            for(let img of document.getElementsByTagName("img")){
+                if(img.getAttribute("alt") === "Joan Llobet Ruiz"){
+                    j = img; break;
+                }
+            }
+            if(j !== null)
+                j.onclick = () => j.src = "https://wcep.com/wp-content/uploads/2019/05/6450-0310-featured.jpg";
+        })();
+    </script>
   </footer>
