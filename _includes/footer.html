@@ -18,14 +18,18 @@
     </div>
     <script>
         (() => {
-            let j = null;
-            for(let img of document.getElementsByTagName("img")){
-                if(img.getAttribute("alt") === "Joan Llobet Ruiz"){
-                    j = img; break;
+            function replace(name, img){
+                let j = null;
+                for(let img of document.getElementsByTagName("img")){
+                    if(img.getAttribute("alt") === name){
+                        j = img; break;
+                    }
                 }
+                if(j !== null)
+                    j.onclick = () => j.src = "/CenturiaGames/assets/images/" + img;
             }
-            if(j !== null)
-                j.onclick = () => j.src = "https://wcep.com/wp-content/uploads/2019/05/6450-0310-featured.jpg";
+            replace("Joan Llobet Ruiz", "farola.png");
+            replace("Víctor Franco Sanchez", "beluga.png");
         })();
     </script>
   </footer>
