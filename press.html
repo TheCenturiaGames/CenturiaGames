@@ -1,0 +1,37 @@
+---
+layout: default
+title: The Hound of Ulster
+---
+
+<section class="game-section">
+
+  <div class="game-horizontal-card">
+    <div class="game-image-placeholder">
+      <!-- Imagen ilustrativa del juego -->
+      <!-- <img src="/assets/images/game-banner.png" alt="Hound of Ulster"> -->
+    </div>
+    <div class="game-content">
+      <h2>Hound of Ulster</h2>
+      <p>
+        Hound of Ulster is an action-packed game with fantastical elements and thrilling combat, offering a free reinterpretation of the myth from the Ulster Cycle. Explore a world that unfolds tile by tile as you fight to reach your goal: the Bull of Cooley.
+      </p>
+    </div>
+  </div>
+
+  <h2>Meet the Characters</h2>
+  <div class="characters-grid">
+    {% for character in site.data.characters %}
+    <div class="character-card">
+      <div class="character-image-placeholder">
+        {% if character.image %}
+        <img src="{{ character.image }}" alt="{{ character.name }}">
+        {% endif %}
+      </div>
+      <div class="character-info">
+        <h3>{{ character.name }}</h3>
+        <p>{{ character.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
