@@ -431,6 +431,10 @@ a:visited {
   transform: scale(1.2);
 }
 
+.white-text {
+  color: #ffffff;
+}
+
 .character-info h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
