@@ -93,7 +93,15 @@ title: The Hound of Ulster
           <div class="about-card">
             <h2>Logos</h2>
             <p>
-              TBA
+            <div class="characters-grid">
+              {% for logo in site.data.logos %}
+              <div class="character-card">
+                <div class="character-image-placeholder">
+                  <img src="{{ logo.image }}">
+                </div>
+              </div>
+              {% endfor %}
+            </div>
             </p>
           </div>
 
