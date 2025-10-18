@@ -17,10 +17,10 @@
   role: Artist
 
 - name: Franco Sanchez, Víctor
-  role: Tech Artist, Artist
+  role: Technical Artist, Artist
 
 - name: Ganter, Lukas
-  role: Producer, Artist
+  role: Producer, Gameplay Programmer, Technical Artist
 
 - name: García Fuentes, Pablo
   role: Programmer

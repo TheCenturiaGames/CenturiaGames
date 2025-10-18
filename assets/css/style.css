@@ -411,12 +411,10 @@ a:visited {
   color: #d4af37;
 }
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url('/CenturiaGames/assets/images/logo.png') fixed;
   background-size: cover;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
   color: #f3e8c8;
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 .hero-content h1 {
@@ -448,7 +446,7 @@ a:visited {
 .intro {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(0, 0, 0, 0.8);
   margin-top: 2rem;
 }
 

@@ -2,74 +2,81 @@
 layout: default
 title: The Hound of Ulster
 ---
+<table>
+  <tr>
+    <td>
+      <section class="game-section">
+        <div class="about-card">
+          <h2>Contact</h2>
+          <p>
+            TBA
+          </p>
+        </div>
 
-<section class="game-section">
-  <div class="about-grid">
-    <div class="about-card">
-      <h2>Description</h2>
-      <p>
-        Lorem ipsum dolor sit amet.
-      </p>
-      <h3>Gameplay Pillars</h3>
-      <p>
-        Lorem ipsum dolor sit amet.
-      </p>
-      <h3>Story</h3>
-      <p>
-        Lorem ipsum dolor sit amet.
-      </p>
-    </div>
+        <div class="about-card">
+          <h2>Team</h2>
+          <p>
+            {% for member in site.data.team_formal %}
+            <b>{{ member.name }}</b><br>
+            {{ member.role }}<br>
+            {% endfor %}
+          </p>
+        </div>
+      </section>
+    </td>
+    <td>
+      <section class="game-section">
+        <div class="about-grid">
+          <div class="about-card">
+            <h2>Description</h2>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <h3>Gameplay Pillars</h3>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+            <h3>Story</h3>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
+          </div>
 
-    <div class="about-card">
-      <h2>Videos</h2>
-      <div class="characters-grid">
-        TBA
-      </div>
-    </div>
+          <div class="about-card">
+            <h2>Videos</h2>
+            <div class="characters-grid">
+              TBA
+            </div>
+          </div>
 
 
-    <div class="about-card">
-      <h2>Images</h2>
-      <div class="characters-grid">
-        {% for character in site.data.images %}
-        <div class="character-card">
-          <div class="character-image-placeholder">
-            <img src="{{ character.image }}" alt="{{ character.name }}">
+          <div class="about-card">
+            <h2>Images</h2>
+            <div class="characters-grid">
+              {% for character in site.data.images %}
+              <div class="character-card">
+                <div class="character-image-placeholder">
+                  <img src="{{ character.image }}" alt="{{ character.name }}">
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h2>Logos</h2>
+            <p>
+              TBA
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h2>About Centuria Games</h2>
+            <p>
+              Lorem ipsum dolor sit amet.
+            </p>
           </div>
         </div>
-        {% endfor %}
-      </div>
-    </div>
-
-    <div class="about-card">
-      <h2>Logos</h2>
-      <p>
-        TBA
-      </p>
-    </div>
-
-    <div class="about-card">
-    <h2>About Centuria Games</h2>
-    <p>
-      Lorem ipsum dolor sit amet.
-    </p>
-    </div>
-
-    <div class="about-card">
-      <h2>Team</h2>
-      <p>
-        {% for member in site.data.team_formal %}
-          <b>{{ member.name }}</b><br>
-          {{ member.role }}<br>
-        {% endfor %}
-      </p>
-    </div>
-
-    <div class="about-card">
-      <h2>Contact</h2>
-      <p>
-        TBA
-      </p>
-    </div>
-  </div>
-</section>
+      </section>
+    </td>
+  </tr>
