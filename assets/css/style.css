@@ -758,3 +758,34 @@ h2 {
     margin-bottom: 1rem;
   }
 }
+
+.press-kit-container {
+  display: flex;
+  flex-direction: row; /* side by side on desktop */
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Left column */
+.press-kit-sidebar {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+/* Right column */
+.press-kit-main {
+  flex: 1;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .press-kit-container {
+    flex-direction: column-reverse; /* stack vertically, reverse order */
+  }
+
+  .press-kit-sidebar,
+  .press-kit-main {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
