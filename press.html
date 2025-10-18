@@ -83,7 +83,7 @@ title: The Hound of Ulster
               {% for character in site.data.images %}
               <div class="character-card">
                 <div class="character-image-placeholder">
-                  <img src="{{ character.image }}" alt="{{ character.name }}">
+                  <a href="{{ character.image }}"><img src="{{ character.image }}" alt="{{ character.name }}"></a>
                 </div>
               </div>
               {% endfor %}
