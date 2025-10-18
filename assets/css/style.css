@@ -316,6 +316,14 @@ a:visited {
   margin: 0 auto;
 }
 
+.press-grid {
+  /*display: grid;*/
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .about-card {
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
@@ -770,6 +778,7 @@ h2 {
 .press-kit-sidebar {
   flex: 0 0 25%;
   max-width: 25%;
+  padding: 0px 0px 0px 20px;
 }
 
 /* Right column */
