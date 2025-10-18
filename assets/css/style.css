@@ -403,6 +403,11 @@ a:visited {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .4s;
+}
+
+.character-image-placeholder img:hover {
+  transform: scale(1.2);
 }
 
 .logo-image-placeholder {
@@ -417,13 +422,13 @@ a:visited {
 .logo-image-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   cursor: pointer;
   transition: transform .4s;
 }
 
 .logo-image-placeholder img:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .character-info h3 {
