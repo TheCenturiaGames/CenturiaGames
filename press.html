@@ -42,8 +42,10 @@ title: The Hound of Ulster
           <h2>Team</h2>
           <p>
             {% for member in site.data.team_formal %}
-            <b>{{ member.name }}</b><br>
-            {{ member.role }}<br>
+            <p>
+              <b>{{ member.name }}</b><br>
+              {{ member.role }}<br>
+            </p>
             {% endfor %}
           </p>
         </div>
