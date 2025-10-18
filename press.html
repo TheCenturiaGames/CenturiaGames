@@ -11,27 +11,49 @@ title: The Hound of Ulster
       <!-- <img src="/assets/images/game-banner.png" alt="Hound of Ulster"> -->
     </div>
     <div class="game-content">
-      <h2>Hound of Ulster</h2>
+      <h2>Description</h2>
       <p>
-        Hound of Ulster is an action-packed game with fantastical elements and thrilling combat, offering a free reinterpretation of the myth from the Ulster Cycle. Explore a world that unfolds tile by tile as you fight to reach your goal: the Bull of Cooley.
+        Lorem ipsum dolor sit amet.
+      </p>
+      <h3>Gameplay Pillars</h3>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+      <h3>Story</h3>
+      <p>
+        Lorem ipsum dolor sit amet.
       </p>
     </div>
   </div>
 
-  <h2>Meet the Characters</h2>
+  <h2>Videos</h2>
   <div class="characters-grid">
-    {% for character in site.data.characters %}
+    TBA
+  </div>
+
+  <h2>Images</h2>
+  <div class="characters-grid">
+    {% for character in site.data.images %}
     <div class="character-card">
       <div class="character-image-placeholder">
-        {% if character.image %}
         <img src="{{ character.image }}" alt="{{ character.name }}">
-        {% endif %}
-      </div>
-      <div class="character-info">
-        <h3>{{ character.name }}</h3>
-        <p>{{ character.description }}</p>
       </div>
     </div>
     {% endfor %}
   </div>
+
+  <h2>Logos</h2>
+  TBA
+
+  <h2>About Centuria Games</h2>
+  Lorem ipsum dolor sit amet.
+
+  <h2>Team</h2>
+  {% for member in site.data.team %}
+    <b>{ member.name }</b><br>
+    { member.role }<br>
+  {% endfor %}
+
+  <h2>Contact</h2>
+  TBA
 </section>
