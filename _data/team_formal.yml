@@ -1,59 +1,59 @@
 - name: Abecia Sagrega, David
-  role: Artist
+  role: Environment Artist, VFX Artist
 
 - name: Casanova Torrequebrada, Marc
-  role: Lead Gameplay, Programmer
+  role: Lead Gameplay, Engine Programmer
 
 - name: Castaño Jimenez, Andreu
-  role: Programmer
+  role: Engine Programmer, Graphics Programmer
 
 - name: Collado Crespo, Carla
-  role: Lead Game Designer, Writer, Artist
+  role: Lead Game Designer, Narrative Designer, Character Designer, Animator, VFX Artist, UI Designer
 
 - name: Curto Forné, Pol
-  role: Programmer
+  role: Gameplay Programmer, Engine Programmer
 
 - name: Duman, Selin
-  role: Artist
+  role: Rigger, Animator, Character Designer, Environment Artist, VFX Artist, Lead Marketing
 
 - name: Franco Sanchez, Víctor
-  role: Technical Artist, Artist
+  role: Artist, Character Designer, VFX Artist, Tech Artist, Graphics Programmer, Web Developer
 
 - name: Ganter, Lukas
-  role: Producer, Gameplay Programmer, Technical Artist
+  role: Producer, Gameplay Programmer, Technical Artist, Technical Level Designer, Graphics Programming
 
 - name: García Fuentes, Pablo
-  role: Programmer
+  role: Gameplay Programmer, AI Programmer
 
 - name: Guerrero Mendoza, Elizabeth
-  role: Lead Artist, Artist
+  role: Lead Artist, Visual Development, Concept Artist, Character Design, Rigger, Animator, Technical Artist, Environment Artist, VFX Artist, Cinematic Artist
 
 - name: Llobet Ruiz, Joan
-  role: Lead Game Designer, Programmer
+  role: Lead Game Designer, Engine Programmer, Graphics Programmer
 
 - name: Lopez Agudo, Alex
-  role: SFX, Artist
+  role: Sound Designer, Artist
 
 - name: Lopez Serrano, Marc
-  role: Programmer
+  role: Gameplay Programmer, Character Development
 
 - name: Zapata Olivares, Dulce M.
-  role: Programmer
+  role: Gameplay Programmer, Engine Programmer, Web Developer
 
 - name: Martí Olivart, Joan
-  role: Programmer
+  role: Gameplay Programmer, UI & Menus Programmer
 
 - name: Mora Rojas, Sebastián
-  role: Artist
+  role: Texture Artist, Retopology, Prop Artist, VFX Artist
 
 - name: Pavlov, Vasilije
-  role: Lead Level Design, Artist
+  role: Lead Level Designer, Lighting Artist, Environment Artist, Animator, VFX Artist,  UI Designer
 
 - name: Perelló Comas, Bartomeu
   role: Lead Game Engine, Programmer
 
 - name: Salvadó Béjar, Andreu
-  role: Producer, Artist
+  role: Producer, Artist, Character designer, Animator, VFX artist, Level Designer, UI designer
 
 - name: Tripiana Garcia, Alex
-  role: Artist
+  role: Animator, Artist
