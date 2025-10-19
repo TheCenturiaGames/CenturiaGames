@@ -6,7 +6,7 @@ categories: Celtic Development
 ---
 
 <video autoplay muted loop id="myVideo">
-  <source src="assets/videos/cu_spin.mp4" type="video/mp4">
+  <source src="/CenturiaGames/assets/videos/cu_spin.mp4" type="video/mp4">
 </video>
 
 This blog post outlines the creation workflow developed within the program for our 
