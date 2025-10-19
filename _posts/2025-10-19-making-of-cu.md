@@ -5,6 +5,10 @@ date: 2025-10-19
 categories: Celtic Development
 ---
 
+<video autoplay muted loop id="myVideo">
+  <source src="assets/videos/cu_spin.mp4" type="video/mp4">
+</video>
+
 This blog post outlines the creation workflow developed within the program for our 
 final game project. Prepared by Lead Artist Elizabeth Guerrero Mendoza, UPC student 
 specializing in technical art.
