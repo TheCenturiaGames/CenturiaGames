@@ -22,7 +22,7 @@ The idea was to adapt it more into a 3d model, whether that be accentuate
 proportions, check if there’s too much noise in certain areas and iterate how the 
 whole silhouette reads, plus adding more storytelling in the general looks.
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image1.png">
 
 ### High Poly Sculpting
 Here it was to find the flow in some areas of the concept such as the fur and hair, 
@@ -32,11 +32,11 @@ between topogun and zbrush to keep a shape I like and polish to make sense in
 geometry, same with the body, and plenty of pieces, basically all of them save for 
 the hair and fur, once I had that, then did I went all in on the HP details.
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image2.png">
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image3.png">
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image4.png">
 
 ### Retopology & UV Unwrapping
 With my workflow of jumping between programs I did most of the retopo side by side 
@@ -46,18 +46,18 @@ UVs had to be done, they could be understood nicely what was each part.
 Also perfect time to do a quick test in Mixamo, just to make sure the model deforms 
 okay before texturing.
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image5.png">
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image6.png">
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image7.png">
 
 ### Baking
 For a better bake everything was arranged in explode.
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image8.png">
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/image9.png">
 
 ### Texturing
 What zbrush to topogun, substance to photoshop, jumping from one to another. 
@@ -68,11 +68,9 @@ Rendering) making sure the metal looks metallic, leather rough, etc. Also where 
 made final tweaks, like giving him a meaner frown or simplifying the colors after 
 getting feedback.
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/imageA.png">
 
-(image)
-
-(image)
+<img src="/CenturiaGames/assets/images/article1/imageB.png">
 
 ### Rigging, Posing and Presentation
 I made a basic rig, which later turned into the first iteration of many, but that's 
@@ -81,6 +79,6 @@ and the 2 bangs to each side, the weight paint was still a test at this time.
 
 And Voila! We have our main character ready for the first tests of animation!
 
-(image)
+<img src="/CenturiaGames/assets/images/article1/imageC.png">
 
 Elizabeth Guerrero Mendoza, Lead Artist at Centuria Games
