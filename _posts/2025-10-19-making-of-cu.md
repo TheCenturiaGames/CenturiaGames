@@ -5,13 +5,13 @@ date: 2025-10-19
 categories: Celtic Development
 ---
 
+This blog post outlines the creation workflow developed within the program for our
+final game project. Prepared by Lead Artist Elizabeth Guerrero Mendoza, UPC student
+specializing in technical art.
+
 <video autoplay muted loop id="myVideo">
   <source src="/CenturiaGames/assets/videos/cu_spin.mp4" type="video/mp4">
 </video>
-
-This blog post outlines the creation workflow developed within the program for our 
-final game project. Prepared by Lead Artist Elizabeth Guerrero Mendoza, UPC student 
-specializing in technical art.
 
 ### Concept & Planning
 The first part before everything was to get the overall feeling of the character and
