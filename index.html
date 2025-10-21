@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="/CenturiaGames/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/CenturiaGames/assets/images/logo.png">
+  <script src="scripts/big_canvas.js"></script>
 </head>
-<body style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url(/CenturiaGames/assets/images/logo.png) fixed; background-color: #0e0e0e; background-size: 100%;">
+<body style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url(/CenturiaGames/assets/images/background_placeholder.png) fixed; background-color: #0e0e0e; background-position: center; background-size: cover;"
+onload="on_body_load()">
   <nav>
-    <ul>
+    <ul style="margin-bottom: 0">
       <li><a href="/CenturiaGames/index.html">Index</a></li>
       <li><a href="/CenturiaGames/about.html">About</a></li>
       <li><a href="/CenturiaGames/team.html">Team</a></li>
@@ -24,6 +26,7 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
+    <div id="wolf_placeholder"></div>
     <div class="hero-content">
       <h1>Welcome to Centuria Games</h1>
       <p>Forging legends with code & creativity.</p>

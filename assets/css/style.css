@@ -448,12 +448,6 @@ a:visited {
   font-size: 1.2rem;
   color: #d4af37;
 }
-.hero {
-  background-size: cover;
-  padding: 4rem 2rem;
-  text-align: center;
-  color: #f3e8c8;
-}
 
 .hero-content h1 {
   font-size: 3rem;
@@ -786,6 +780,18 @@ h2 {
   flex: 1;
 }
 
+.hero {
+  background-size: cover;
+  text-align: center;
+  color: #f3e8c8;
+  padding: 0 2rem 4rem;
+}
+
+.bigcanvas {
+  width: 700px;
+  max-width: 100%;
+}
+
 /* Responsive behavior */
 @media (max-width: 768px) {
   .press-kit-container {
@@ -796,5 +802,9 @@ h2 {
   .press-kit-main {
     max-width: 100%;
     flex: 1 1 100%;
+  }
+
+  .bigcanvas {
+    top: 336px;
   }
 }
