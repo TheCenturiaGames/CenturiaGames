@@ -6,23 +6,27 @@
   <title>Centuria Games</title>
   <link rel="stylesheet" href="/CenturiaGames/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/CenturiaGames/assets/images/logo.png">
+  <script src="scripts/big_canvas.js"></script>
 </head>
-<body>
-
+<body style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url(/CenturiaGames/assets/images/background_placeholder.png) fixed; background-color: #0e0e0e; background-position: center; background-size: cover;"
+onload="on_body_load()">
   <nav>
-    <ul>
+    <ul style="margin-bottom: 0">
       <li><a href="/CenturiaGames/index.html">Index</a></li>
       <li><a href="/CenturiaGames/about.html">About</a></li>
       <li><a href="/CenturiaGames/team.html">Team</a></li>
       <li><a href="/CenturiaGames/game.html">Game</a></li>
       <li><a href="/CenturiaGames/engine.html">Engine</a></li>
       <li><a href="/CenturiaGames/blog.html">Blog</a></li>
+      <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
       <li><a href="/CenturiaGames/download.html">Download</a></li>
     </ul>
   </nav>
 
   <!-- HERO SECTION -->
   <section class="hero">
+    <div id="wolf_placeholder"></div>
     <div class="hero-content">
       <h1>Welcome to Centuria Games</h1>
       <p>Forging legends with code & creativity.</p>
@@ -33,8 +37,17 @@
   <!-- INTRO SECTION -->
   <section class="intro">
     <h2>The Hound of Ulster</h2>
-    <p>This is the official website of <strong>Hound of Ulster</strong>, an action-packed game developed during the <em>UPC Masters of Advanced Programming for AAA Games</em> and the <em>Animation & Digital Arts for AAA Games</em>.</p>
-    <p>Discover devlogs, gameplay updates, engine insights, and the journey behind our custom-made <strong>Sobrassada Engine</strong>.</p>
+    <p><strong>Welcome to the official website of the Hound of Ulster</strong> — a narrative-rich, action-filled game
+      developed by Centuria Games as part of the UPC Master's program in
+      <a href="https://www.talent.upc.edu/esp/estudis/formacio/curs/201200/master-advanced-programming-aaa-videogames">
+        Advanced Programming for AAA Games
+      </a> and
+      <a href="https://www.talent.upc.edu/esp/estudis/formacio/curs/215400/master-animation-digital-arts-aaa-video-games/">
+        Animation & Digital Arts for AAA Games
+      </a>.</p>
+    <p>Wondering how everything came together? Explore our devlogs, gameplay updates,and behind-the-scenes looks at the
+      stylized art that brings Hound of Ulster to life — all powered by our custom-built Sobrassada Engine (yes, just
+      like the sausage).</p>
   </section>
 
   <!-- QUICK LINKS SECTION -->
@@ -55,8 +68,13 @@
 
   <footer class="footer">
     <div class="footer-left">
-      <h2>Centuria Games</h2>
-      <p>© 2025 Centuria Games. All rights reserved.</p>
+      <div style="display: inline-block">
+        <img src="./assets/images/logo_monochrome.png" style="height: 60px">
+      </div>
+      <div style="display: inline-block">
+        <h2>Centuria Games</h2>
+        <p>© 2025 Centuria Games. All rights reserved.</p>
+      </div>
     </div>
     <div class="footer-right">
       <a href="#"><img src="/CenturiaGames/assets/icons/youtube.svg" alt="YouTube" /></a>

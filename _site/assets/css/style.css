@@ -20,6 +20,7 @@ body {
     justify-content: center;
     background-color: rgba(20, 20, 20, 0.8);
     padding: 1em;
+    margin-top: 0;
   }
   
   nav ul li {
@@ -292,7 +293,7 @@ a:visited {
 
 .blog-content img, .blog-content video {
   max-width: 100%;
-  margin: 1rem 0;
+  margin: auto;
   display: block;
 }
 
@@ -309,7 +310,15 @@ a:visited {
 }
 
 .about-grid {
-  display: grid;
+  /*display: grid;*/
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.press-grid {
+  /*display: grid;*/
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: 1000px;
@@ -322,6 +331,7 @@ a:visited {
   border-left: 5px solid #d4af37;
   border-radius: 16px;
   transition: transform 0.3s ease;
+  margin-top: 10px;
 }
 
 .about-card:hover {
@@ -402,20 +412,42 @@ a:visited {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .4s;
+}
+
+.character-image-placeholder img:hover {
+  transform: scale(1.2);
+}
+
+.logo-image-placeholder {
+  width: 100%;
+  height: 180px;
+  background: #444;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.logo-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform .4s;
+}
+
+.logo-image-placeholder img:hover {
+  transform: scale(1.2);
+}
+
+.white-text {
+  color: #ffffff;
 }
 
 .character-info h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
   color: #d4af37;
-}
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url('/CenturiaGames/assets/images/texture_dark_celtic.avif');
-  background-size: cover;
-  padding: 6rem 2rem;
-  text-align: center;
-  color: #f3e8c8;
-  box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 .hero-content h1 {
@@ -447,7 +479,7 @@ a:visited {
 .intro {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: rgba(0, 0, 0, 0.8);
   margin-top: 2rem;
 }
 
@@ -494,7 +526,6 @@ a:visited {
 
 .engine-logo {
   flex: 1;
-  background-color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,7 +533,7 @@ a:visited {
 }
 
 .engine-logo img {
-  max-width: 100px;
+  max-width: 500px;
 }
 
 .engine-info {
@@ -681,6 +712,10 @@ h2 {
     height: auto;
   }
 
+  .engine-logo img{
+    max-width: 100px;
+  }
+
   .footer {
     flex-direction: column;
     text-align: center;
@@ -727,5 +762,53 @@ h2 {
 
   .engine-logo img {
     margin-bottom: 1rem;
+  }
+}
+
+.press-kit-container {
+  display: flex;
+  flex-direction: row; /* side by side on desktop */
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Left column */
+.press-kit-sidebar {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0px 0px 0px 20px;
+}
+
+/* Right column */
+.press-kit-main {
+  flex: 1;
+}
+
+.hero {
+  background-size: cover;
+  text-align: center;
+  color: #f3e8c8;
+  padding: 0 2rem 4rem;
+}
+
+.bigcanvas {
+  width: 700px;
+  max-width: 100%;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .press-kit-container {
+    flex-direction: column-reverse; /* stack vertically, reverse order */
+  }
+
+  .press-kit-sidebar,
+  .press-kit-main {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .bigcanvas {
+    top: 336px;
   }
 }

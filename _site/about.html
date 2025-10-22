@@ -10,6 +10,7 @@
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/CenturiaGames/assets/images/logo.png">
 </head>
 
 <nav>
@@ -20,6 +21,7 @@
     <li><a href="/CenturiaGames/game.html">Game</a></li>
     <li><a href="/CenturiaGames/engine.html">Engine</a></li>
     <li><a href="/CenturiaGames/blog.html">Blog</a></li>
+    <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
     <li><a href="/CenturiaGames/download.html">Download</a></li>
   </ul>
 </nav>
@@ -31,26 +33,47 @@
   <div class="about-grid">
     <div class="about-card">
       <h2>🎓 Our Origins</h2>
-      <p>Centuria Games is an indie studio created in the city of Barcelona for the UPC Universitat Politècnica de Catalunya during 2024-2025 master degree. We are students from the Master in Advanced Programming and the Master in Animation & Digital Arts for AAA Videogames. We're the team behind the project <strong>The Hound of Ulster</strong>, built on our custom in-house engine called <strong>Sobrassada Engine</strong>.</p>
+      <p>
+        Founded during the 2024–2025 UPC Master's programs in Advanced Programming and Animation & Digital Arts for AAA
+        Games, Centuria Games is an independent studio based in Barcelona. We are the creative team behind The Hound of
+        Ulster, an action game inspired by Celtic myths. From environmental design to animation and shader work, every
+        detail has been carefully designed by our creatives. To bring our vision to life, we created our own custom
+        engine: the Sobrassada Engine. Built entirely from the ground up by our dedicated programmers, it empowers our
+        artists to experiment all the cool, quirky, and stylized ideas they imagined.
+      </p>
     </div>
 
     <div class="about-card">
       <h2>🕹️ The Game</h2>
-      <p>Take the role of <strong>Cu Chulainn</strong> and embark on an epic journey to recover the Bull of Cooley, filled with fast-paced and dynamic combat inspired by Celtic mythology.</p>
+      <p>
+        Take the role of <strong>Cu Chulainn</strong> and embark on a legendary quest to recover the <strong>Bull of
+        Cooley</strong>. Inspired by Celtic myths, The Hound of Ulster blends fast-paced, responsive combat with a
+        striking, stylized world full of gods, warriors, and old magic. Battle fierce enemies, explore ancient stories,
+        and carve your own path through a myth where every move feels meaningful — and every fight tells part of the
+        tale.
+      </p>
     </div>
 
     <div class="about-card">
       <h2>📣 Follow the Progress</h2>
-      <p>On this site, we’ll post development updates in our blog, as well as downloadable builds of the game as we release them. Stay tuned!</p>
+      <p>
+        Take a look at The Hound of Ulster's production process! From early concepts to gameplay polish, you’ll get an
+        inside look at our creative process. We will be providing updates, showcasing artwork, and offering playable
+        builds right here as the project progresses. Stay tuned for more!
+      </p>
     </div>
   </div>
 </section>
   </main>
   <footer class="footer">
     <div class="footer-left">
-      <h2>Centuria Games</h2>
-      <p>© 2025 Centuria Games. All rights reserved.</p>
-      <p>Forging legends with code & creativity.</p>
+        <div style="display: inline-block">
+            <img src="/CenturiaGames/assets/images/logo_monochrome.png" style="height: 60px">
+        </div>
+        <div style="display: inline-block">
+            <h2>Centuria Games</h2>
+            <p>© 2025 Centuria Games. All rights reserved.</p>
+        </div>
     </div>
     <div class="footer-right">
       <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><img src="/CenturiaGames/assets/icons/youtube.svg" alt="YouTube" /></a>
@@ -60,6 +83,22 @@
       <a href="https://tiktok.com/" target="_blank" aria-label="TikTok"><img src="/CenturiaGames/assets/icons/tiktok.svg" alt="TikTok" /></a>
       <a href="https://centuriagames.itch.io" target="_blank" aria-label="itch.io"><img src="/CenturiaGames/assets/icons/itchio.svg" alt="TikTok" /></a>
     </div>
+    <script>
+        (() => {
+            function replace(name, img){
+                let j = null;
+                for(let img of document.getElementsByTagName("img")){
+                    if(img.getAttribute("alt") === name){
+                        j = img; break;
+                    }
+                }
+                if(j !== null)
+                    j.onclick = () => j.src = "/CenturiaGames/assets/images/" + img;
+            }
+            replace("Joan Llobet Ruiz", "farola.png");
+            replace("Víctor Franco Sanchez", "beluga.png");
+        })();
+    </script>
   </footer>
   <script src="/CenturiaGames/assets/js/main.js"></script>
 </body>
