@@ -25,8 +25,16 @@
                         j = img; break;
                     }
                 }
-                if(j !== null)
-                    j.onclick = () => j.src = "/CenturiaGames/assets/images/" + img;
+                if(j !== null) {
+                    let base = j.src;
+                    let fs = [() => j.src = "/CenturiaGames/assets/images/" + img, () => j.src = base];
+                    let i = 0;
+                    j.onclick = function(){
+                        fs[i]();
+                        i = 1 - i;
+                    }
+
+                }
             }
             replace("Joan Llobet Ruiz", "farola.png");
             replace("Víctor Franco Sanchez", "beluga.png");
