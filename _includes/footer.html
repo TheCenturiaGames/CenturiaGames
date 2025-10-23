@@ -18,14 +18,16 @@
     </div>
     <script>
         (() => {
-            function replace(name, img){
-                let j = null;
-                for(let img of document.getElementsByTagName("img")){
-                    if(img.getAttribute("alt") === name){
-                        j = img; break;
-                    }
+            let map = {};
+            for(let img of document.getElementsByTagName("img")){
+                let alt = img.getAttribute("alt");
+                if(alt !== null){
+                    map[alt] = img;
                 }
-                if(j !== null) {
+            }
+            function replace(name, img){
+                let j = map[name];
+                if(j !== undefined) {
                     let base = j.src;
                     let fs = [() => j.src = "/CenturiaGames/assets/images/" + img, () => j.src = base];
                     let i = 0;
@@ -38,6 +40,7 @@
             }
             replace("Joan Llobet Ruiz", "farola.png");
             replace("Víctor Franco Sanchez", "beluga.png");
+            replace("Alex Lopez Agudo", "hedgehog.gif");
         })();
     </script>
   </footer>
