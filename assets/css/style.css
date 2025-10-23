@@ -526,7 +526,6 @@ a:visited {
 
 .engine-logo {
   flex: 1;
-  background-color: #111;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +533,7 @@ a:visited {
 }
 
 .engine-logo img {
-  max-width: 100px;
+  max-width: 500px;
 }
 
 .engine-info {
@@ -711,6 +710,10 @@ h2 {
   .game-image-placeholder {
     width: 100%;
     height: auto;
+  }
+
+  .engine-logo img{
+    max-width: 100px;
   }
 
   .footer {
