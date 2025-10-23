@@ -48,3 +48,17 @@ title: Engine - Sobrassada Engine
   </div>
   <img src="assets/images/gifs/SobrassadaCenturia.gif" style="display: block; margin: auto; width: 50%;">
 </section>
+
+<section class="libraries">
+  <h2>Gallery</h2>
+  <div class="libraries-grid">
+    {% for img in site.data.engine_screenshots %}
+    <div class="character-card">
+      <div class="logo-image-placeholder">
+        <a href="{{ img.image }}"><img src="{{ img.image }}"></a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <img src="assets/images/gifs/SobrassadaCenturia.gif" style="display: block; margin: auto; width: 50%;">
+</section>
