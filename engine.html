@@ -54,7 +54,9 @@ title: Engine - Sobrassada Engine
     {% for img in site.data.engine_screenshots %}
     <div class="character-card">
       <div class="logo-image-placeholder">
-        <a href="{{ img.image }}"><img src="{{ img.image }}"></a>
+        <a class="example-image-link" href="{{ img.image }}" data-lightbox="example-1">
+          <img class="example-image" src="{{ img.image }}">
+        </a>
       </div>
     </div>
     {% endfor %}
