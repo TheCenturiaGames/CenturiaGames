@@ -96,7 +96,9 @@ title: Press Kit - The Hound of Ulster
               {% for character in site.data.images %}
               <div class="character-card">
                 <div class="character-image-placeholder">
-                  <a href="{{ character.image }}"><img src="{{ character.image }}" alt="{{ character.name }}"></a>
+                  <a class="example-image-link" href="{{ character.image }}" data-lightbox="example-1">
+                    <img class="example-image" src="{{ character.image }}" alt="{{ character.name }}">
+                  </a>
                 </div>
               </div>
               {% endfor %}
@@ -110,7 +112,9 @@ title: Press Kit - The Hound of Ulster
               {% for logo in site.data.logos %}
               <div class="character-card">
                 <div class="logo-image-placeholder">
-                  <a href="{{ logo.image }}"><img src="{{ logo.image }}"></a>
+                  <a class="example-image-link" href="{{ logo.image }}" data-lightbox="example-2">
+                    <img class="example-image" src="{{ logo.image }}">
+                  </a>
                 </div>
               </div>
               {% endfor %}
