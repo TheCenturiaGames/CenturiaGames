@@ -35,12 +35,34 @@
                         fs[i]();
                         i = 1 - i;
                     }
-
                 }
+            }
+
+            function append(name, image, cls){
+                let j = map[name];
+                if(j !== undefined) {
+                    let img = document.createElement("img");
+                    img.src = "/CenturiaGames/assets/images/" + image;
+                    img.setAttribute("class", cls);
+                    img.style.display = "none";
+                    j.parentElement.parentElement.appendChild(img);
+
+                    let base = j.src;
+                    let fs = [() => img.display = "block", () => j.display = "none"];
+                    let i = 0;
+                    let f = function(){
+                        fs[i]();
+                        i = 1 - i;
+                    }
+                    j.onclick = f;
+                    img.onclick = f;
+                }
+
             }
             replace("Joan Llobet Ruiz", "farola.png");
             replace("Víctor Franco Sanchez", "beluga.png");
             replace("Alex Lopez Agudo", "hedgehog.gif");
+            append("Andreu Salvadó Béjar", "pooka.png", "cradle-image");
         })();
     </script>
     <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>

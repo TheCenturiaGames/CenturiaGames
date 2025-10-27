@@ -137,6 +137,7 @@ a:visited {
     text-align: center;
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
   }
   
   .team-card:hover {
@@ -872,5 +873,24 @@ h2 {
   .ost-main {
     max-width: 100%;
     flex: 1 1 100%;
+  }
+}
+
+.cradle-image {
+  animation: cradle 3s ease-in-out infinite;
+  transform-origin: center left;
+  width: 120px;
+  height: 120px;
+  top: 15px;
+  left: 120px;
+  position: absolute;
+}
+
+@keyframes cradle {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
   }
 }
