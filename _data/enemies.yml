@@ -1,0 +1,15 @@
+- name: Soldier
+  desc: The valiant foot soldiers of the Queen Mehb army.
+  img: assets/images/enemies/soldier.png
+
+- name: Archer
+  desc: The greatly skilled archers of Queen Mehb.
+  img: assets/images/enemies/archer.png
+
+- name: Banshee
+  desc: The hostile, weeping spirits of the forest.
+  img: assets/images/enemies/banshee.png
+
+- name: Pooka
+  desc: Mischievous little creatures, bringers of bad luck. At least, of yours.
+  img: assets/images/enemies/pooka.png

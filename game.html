@@ -46,4 +46,20 @@ title: The Hound of Ulster
         </div>
       {% endfor %}
     </div>
+  <h3>Meet your Enemies</h3>
+  <div class="characters-grid">
+    {% for character in site.data.enemies %}
+    <div class="character-card">
+      <div class="character-image-placeholder">
+        {% if character.img %}
+        <img src="{{ character.img }}" alt="{{ character.name }}">
+        {% endif %}
+      </div>
+      <div class="character-info">
+        <h3>{{ character.name }}</h3>
+        <p>{{ character.desc }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
   </section>
