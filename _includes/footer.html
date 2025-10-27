@@ -46,9 +46,7 @@
                     img.setAttribute("class", cls);
                     img.style.display = "none";
                     j.parentElement.parentElement.appendChild(img);
-
-                    let base = j.src;
-                    let fs = [() => img.display = "block", () => j.display = "none"];
+                    let fs = [() => img.style.display = "block", () => img.style.display = "none"];
                     let i = 0;
                     let f = function(){
                         fs[i]();
