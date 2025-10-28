@@ -26,7 +26,9 @@ title: Original Soundtrack
       <div class="about-card">
         {% for song in site.data.songs %}
         <div>
-          <source src="{{ song.song }}" type="audio/mpeg">
+          <audio controls>
+            <source src="{{ song.song }}" type="audio/mpeg">
+          </audio>
         </div>
         {% endfor %}
       </div>
@@ -56,6 +58,11 @@ title: Original Soundtrack
       </div>
     </div>
   </div>
-  <a href="assets/music/OST_The_Hound_Of_Ulster.zip" class="cta-button">Download the Full Soundtrack</a>
+  <a href="assets/music/OST_The_Hound_Of_Ulster.zip" class="cta-button" style="
+    margin: auto;
+    display: block;
+    width: fit-content;
+    margin-top: 30px;
+  ">Download the Full Soundtrack</a>
 
 </section>
