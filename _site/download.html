@@ -8,11 +8,11 @@
 </head>
 <body>
   <div class="page-container">
-
     <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/CenturiaGames/assets/images/logo.png">
+  <link href="/CenturiaGames/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 </head>
 
 <nav>
@@ -22,12 +22,12 @@
     <li><a href="/CenturiaGames/team.html">Team</a></li>
     <li><a href="/CenturiaGames/game.html">Game</a></li>
     <li><a href="/CenturiaGames/engine.html">Engine</a></li>
+    <li><a href="/CenturiaGames/ost.html">OST</a></li>
     <li><a href="/CenturiaGames/blog.html">Blog</a></li>
     <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
     <li><a href="/CenturiaGames/download.html">Download</a></li>
   </ul>
 </nav>
-
 
     <main>
       <section id="download" class="download-section">
@@ -50,7 +50,6 @@
     </div>
   </section>
     </main>
-
     <footer class="footer">
     <div class="footer-left">
         <div style="display: inline-block">
@@ -71,22 +70,53 @@
     </div>
     <script>
         (() => {
+            let map = {};
+            for(let img of document.getElementsByTagName("img")){
+                let alt = img.getAttribute("alt");
+                if(alt !== null){
+                    map[alt] = img;
+                }
+            }
             function replace(name, img){
-                let j = null;
-                for(let img of document.getElementsByTagName("img")){
-                    if(img.getAttribute("alt") === name){
-                        j = img; break;
+                let j = map[name];
+                if(j !== undefined) {
+                    let base = j.src;
+                    let fs = [() => j.src = "/CenturiaGames/assets/images/" + img, () => j.src = base];
+                    let i = 0;
+                    j.onclick = function(){
+                        fs[i]();
+                        i = 1 - i;
                     }
                 }
-                if(j !== null)
-                    j.onclick = () => j.src = "/CenturiaGames/assets/images/" + img;
+            }
+
+            function append(name, image, cls){
+                let j = map[name];
+                if(j !== undefined) {
+                    let img = document.createElement("img");
+                    img.src = "/CenturiaGames/assets/images/" + image;
+                    img.setAttribute("class", cls);
+                    img.style.display = "none";
+                    j.parentElement.parentElement.appendChild(img);
+                    let fs = [() => img.style.display = "block", () => img.style.display = "none"];
+                    let i = 0;
+                    let f = function(){
+                        fs[i]();
+                        i = 1 - i;
+                    }
+                    j.onclick = f;
+                    img.onclick = f;
+                }
+
             }
             replace("Joan Llobet Ruiz", "farola.png");
             replace("Víctor Franco Sanchez", "beluga.png");
+            replace("Alex Lopez Agudo", "hedgehog.gif");
+            append("Andreu Salvadó Béjar", "pooka.png", "cradle-image");
         })();
     </script>
+    <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
   </footer>
-
   </div>
 
   <script src="/CenturiaGames/assets/js/main.js"></script>

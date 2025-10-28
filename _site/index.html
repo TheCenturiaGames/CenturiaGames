@@ -8,9 +8,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="/CenturiaGames/assets/images/logo.png">
   <script src="scripts/big_canvas.js"></script>
+  <link href="/CenturiaGames/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 </head>
-<body style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url(/CenturiaGames/assets/images/background_placeholder.png) fixed; background-color: #0e0e0e; background-position: center; background-size: cover;"
+<!--
+<body style="
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 10, 10, 0.8)), url(/CenturiaGames/assets/images/background_placeholder.png) fixed;
+  background-color: #0e0e0e;
+  background-position: center;
+  background-size: cover;"
 onload="on_body_load()">
+-->
+<body onload="on_body_load()">
+<video autoplay muted loop style="
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.6;">
+  <source src="/CenturiaGames/assets/videos/main_intro.mp4" type="video/mp4">
+</video>
   <nav>
     <ul style="margin-bottom: 0">
       <li><a href="/CenturiaGames/index.html">Index</a></li>
@@ -18,6 +36,7 @@ onload="on_body_load()">
       <li><a href="/CenturiaGames/team.html">Team</a></li>
       <li><a href="/CenturiaGames/game.html">Game</a></li>
       <li><a href="/CenturiaGames/engine.html">Engine</a></li>
+      <li><a href="/CenturiaGames/ost.html">Engine</a></li>
       <li><a href="/CenturiaGames/blog.html">Blog</a></li>
       <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
       <li><a href="/CenturiaGames/download.html">Download</a></li>
@@ -84,6 +103,7 @@ onload="on_body_load()">
       <a href="#"><img src="/CenturiaGames/assets/icons/tiktok.svg" alt="TikTok" /></a>
     </div>
   </footer>
- <scrip src = "assets/js/main.js"> </scrip>
+  <script src = "assets/js/main.js"> </script>
+  <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

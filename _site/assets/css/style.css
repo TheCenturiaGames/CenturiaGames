@@ -79,6 +79,7 @@ a:visited {
     padding: 2rem;
     font-family: 'Cinzel', serif;
     border-top: 1px solid #444;
+    margin-top: 30px;
   }
   
   .footer-left {
@@ -136,6 +137,7 @@ a:visited {
     text-align: center;
     box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
   }
   
   .team-card:hover {
@@ -747,6 +749,8 @@ h2 {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+
+    padding-top: 30px;
   }
 
   .footer-left,
@@ -837,5 +841,56 @@ h2 {
 
   .bigcanvas {
     top: 336px;
+  }
+}
+
+
+.ost-container {
+  display: flex;
+  flex-direction: row; /* side by side on desktop */
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Left column */
+.ost-sidebar {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0px 0px 0px 20px;
+}
+
+/* Right column */
+.ost-main {
+  flex: 1;
+}
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .ost-container {
+    flex-direction: column-reverse; /* stack vertically, reverse order */
+  }
+
+  .ost-sidebar,
+  .ost-main {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.cradle-image {
+  animation: cradle 3s ease-in-out infinite;
+  transform-origin: center left;
+  width: 120px;
+  height: 120px;
+  top: 15px;
+  left: 120px;
+  position: absolute;
+}
+
+@keyframes cradle {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
   }
 }

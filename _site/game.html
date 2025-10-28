@@ -8,11 +8,11 @@
 </head>
 <body>
   <div class="page-container">
-
     <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/CenturiaGames/assets/images/logo.png">
+  <link href="/CenturiaGames/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 </head>
 
 <nav>
@@ -22,15 +22,27 @@
     <li><a href="/CenturiaGames/team.html">Team</a></li>
     <li><a href="/CenturiaGames/game.html">Game</a></li>
     <li><a href="/CenturiaGames/engine.html">Engine</a></li>
+    <li><a href="/CenturiaGames/ost.html">OST</a></li>
     <li><a href="/CenturiaGames/blog.html">Blog</a></li>
     <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
     <li><a href="/CenturiaGames/download.html">Download</a></li>
   </ul>
 </nav>
 
-
     <main>
-      <section class="game-section">
+      <video autoplay muted loop style="
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.6;">
+  <source src="/CenturiaGames/assets/videos/main_intro.mp4" type="video/mp4">
+</video>
+
+
+<section class="game-section">
   
     <div class="game-horizontal-card">
       <div class="game-image-placeholder">
@@ -97,9 +109,60 @@
         </div>
       
     </div>
+  <h2>Meet your Enemies</h2>
+  <div class="characters-grid">
+    
+    <div class="character-card">
+      <div class="character-image-placeholder">
+        
+        <img src="assets/images/enemies/soldier.png" alt="Soldier">
+        
+      </div>
+      <div class="character-info">
+        <h3>Soldier</h3>
+        <p>The valiant foot soldiers of the Queen Mehb army.</p>
+      </div>
+    </div>
+    
+    <div class="character-card">
+      <div class="character-image-placeholder">
+        
+        <img src="assets/images/enemies/archer.png" alt="Archer">
+        
+      </div>
+      <div class="character-info">
+        <h3>Archer</h3>
+        <p>The greatly skilled archers of Queen Mehb.</p>
+      </div>
+    </div>
+    
+    <div class="character-card">
+      <div class="character-image-placeholder">
+        
+        <img src="assets/images/enemies/banshee.png" alt="Banshee">
+        
+      </div>
+      <div class="character-info">
+        <h3>Banshee</h3>
+        <p>The hostile, weeping spirits of the forest.</p>
+      </div>
+    </div>
+    
+    <div class="character-card">
+      <div class="character-image-placeholder">
+        
+        <img src="assets/images/enemies/pooka.png" alt="Pooka">
+        
+      </div>
+      <div class="character-info">
+        <h3>Pooka</h3>
+        <p>Mischievous little creatures, bringers of bad luck. At least, of yours.</p>
+      </div>
+    </div>
+    
+  </div>
   </section>
     </main>
-
     <footer class="footer">
     <div class="footer-left">
         <div style="display: inline-block">
@@ -120,22 +183,53 @@
     </div>
     <script>
         (() => {
+            let map = {};
+            for(let img of document.getElementsByTagName("img")){
+                let alt = img.getAttribute("alt");
+                if(alt !== null){
+                    map[alt] = img;
+                }
+            }
             function replace(name, img){
-                let j = null;
-                for(let img of document.getElementsByTagName("img")){
-                    if(img.getAttribute("alt") === name){
-                        j = img; break;
+                let j = map[name];
+                if(j !== undefined) {
+                    let base = j.src;
+                    let fs = [() => j.src = "/CenturiaGames/assets/images/" + img, () => j.src = base];
+                    let i = 0;
+                    j.onclick = function(){
+                        fs[i]();
+                        i = 1 - i;
                     }
                 }
-                if(j !== null)
-                    j.onclick = () => j.src = "/CenturiaGames/assets/images/" + img;
+            }
+
+            function append(name, image, cls){
+                let j = map[name];
+                if(j !== undefined) {
+                    let img = document.createElement("img");
+                    img.src = "/CenturiaGames/assets/images/" + image;
+                    img.setAttribute("class", cls);
+                    img.style.display = "none";
+                    j.parentElement.parentElement.appendChild(img);
+                    let fs = [() => img.style.display = "block", () => img.style.display = "none"];
+                    let i = 0;
+                    let f = function(){
+                        fs[i]();
+                        i = 1 - i;
+                    }
+                    j.onclick = f;
+                    img.onclick = f;
+                }
+
             }
             replace("Joan Llobet Ruiz", "farola.png");
             replace("Víctor Franco Sanchez", "beluga.png");
+            replace("Alex Lopez Agudo", "hedgehog.gif");
+            append("Andreu Salvadó Béjar", "pooka.png", "cradle-image");
         })();
     </script>
+    <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
   </footer>
-
   </div>
 
   <script src="/CenturiaGames/assets/js/main.js"></script>
