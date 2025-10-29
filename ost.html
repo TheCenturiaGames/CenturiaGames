@@ -24,13 +24,20 @@ title: Original Soundtrack
         flex: 0 0 50%;
       ">
       <div class="about-card">
+        <table>
         {% for song in site.data.songs %}
-        <div style="text-align: center;">
-          <audio controls>
-            <source src="{{ song.song }}" type="audio/mpeg">
-          </audio>
-        </div>
+          <tr>
+            <td>
+              {{ song.name }}
+            </td>
+            <td style="text-align: center;">
+              <audio controls>
+                <source src="{{ song.song }}" type="audio/mpeg">
+              </audio>
+            </td>
+          </tr>
         {% endfor %}
+        </table>
       </div>
     </div>
 

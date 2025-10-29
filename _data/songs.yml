@@ -1,18 +1,27 @@
 - song: assets/music/track01.mp3
+  name: Morrigan
 
 - song: assets/music/track02.mp3
+  name: The Tale of Two Bulls
 
 - song: assets/music/track03.mp3
+  name: Fire of Ulster
 
 - song: assets/music/track04.mp3
+  name: Lorem Ipsum
 
 - song: assets/music/track05.mp3
+  name: Dolor sit amet
 
 - song: assets/music/track06.mp3
+  name: Something something
 
 - song: assets/music/track07.mp3
+  name: Si lees esto
 
 - song: assets/music/track08.mp3
+  name: Eres tonto lol
 
 - song: assets/music/track09.mp3
+  name: Brothers in Arms
 
