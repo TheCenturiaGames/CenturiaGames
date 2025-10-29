@@ -864,7 +864,7 @@ h2 {
   flex: 1;
 }
 /* Responsive behavior */
-@media (max-width: 768px) {
+@media (max-width: 875px) {
   .ost-container {
     flex-direction: column-reverse; /* stack vertically, reverse order */
   }
