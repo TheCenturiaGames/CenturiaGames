@@ -2,26 +2,26 @@
   name: Morrigan
 
 - song: assets/music/track02.mp3
-  name: The Tale of Two Bulls
+  name: The Empty Temple
 
 - song: assets/music/track03.mp3
-  name: Fire of Ulster
+  name: Raid of Ulster
 
 - song: assets/music/track04.mp3
-  name: Forbidden Lands of Conath
+  name: Ruins of the Otherworld (exploration)
 
 - song: assets/music/track05.mp3
-  name: Embers in the Wind
+  name: Ruins of the Otherworld (combat)
 
 - song: assets/music/track06.mp3
   name: Might of the Gae Bulg
 
 - song: assets/music/track07.mp3
-  name: Tailte Draíochta
+  name: Haunted Waters (exploration)
 
 - song: assets/music/track08.mp3
-  name: The Hound's Fangs
+  name: Haunted Waters (combat)
 
 - song: assets/music/track09.mp3
-  name: Brothers in Arms
+  name: The Last Duel
 
