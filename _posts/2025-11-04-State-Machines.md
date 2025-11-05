@@ -73,3 +73,5 @@ For this, I used the existing interpolation system between keyframes of a single
 
 In general terms, if there is an active transition toward another animation, the system **calculates the blend weight between both and combines the results of position, rotation, and scale from the relevant channels, producing a progressive interpolation for a smooth transition**.
 Once the transition finishes, the target animation becomes the primary one, and the previous animation is released. If an animation reaches its end and is not set to loop, playback stops automatically.
+
+Pablo García, Engine Programmer at Centuria Games

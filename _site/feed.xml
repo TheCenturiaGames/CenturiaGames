@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/CenturiaGames/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/CenturiaGames/" rel="alternate" type="text/html" /><updated>2025-10-28T17:20:35+01:00</updated><id>http://localhost:4000/CenturiaGames/feed.xml</id><title type="html">Centuria Games</title><subtitle>Official Website of the Hound of Ulster</subtitle><entry><title type="html">Making of Our Main Character: Cu Chulainn!</title><link href="http://localhost:4000/CenturiaGames/2025/10/19/making-of-cu/" rel="alternate" type="text/html" title="Making of Our Main Character: Cu Chulainn!" /><published>2025-10-19T00:00:00+02:00</published><updated>2025-10-19T00:00:00+02:00</updated><id>http://localhost:4000/CenturiaGames/2025/10/19/making-of-cu</id><content type="html" xml:base="http://localhost:4000/CenturiaGames/2025/10/19/making-of-cu/"><![CDATA[<p>This blog post outlines the creation workflow developed within the program for our
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/CenturiaGames/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/CenturiaGames/" rel="alternate" type="text/html" /><updated>2025-11-06T00:15:36+01:00</updated><id>http://localhost:4000/CenturiaGames/feed.xml</id><title type="html">Centuria Games</title><subtitle>Official Website of the Hound of Ulster</subtitle><entry><title type="html">A Look Into Our Engine: States Machines</title><link href="http://localhost:4000/CenturiaGames/2025/11/04/State-Machines/" rel="alternate" type="text/html" title="A Look Into Our Engine: States Machines" /><published>2025-11-04T00:00:00+01:00</published><updated>2025-11-04T00:00:00+01:00</updated><id>http://localhost:4000/CenturiaGames/2025/11/04/State-Machines</id><content type="html" xml:base="http://localhost:4000/CenturiaGames/2025/11/04/State-Machines/"><![CDATA[<p>This blog post outlines the workflow to create state machines for our custom game engine, from the process to create clips and save them, to create triggers and the inspector. Prepared by one of our team programmers Pablo García , UPC student specializing in engine programming.</p>
+
+<p><strong>State Machine Resource</strong></p>
+
+<p>Once the entire animation system was completed, I began implementing the state machine.
+The first step was creating the resource responsible for managing the states, their corresponding clips, the transitions between them, and the triggers that activate those transitions.</p>
+
+<p>In this stage, I built the foundation — the ability to add, remove, and edit clips, states, and transitions, each identified by a unique name.</p>
+
+<p>Each state contains its associated clip. Transitions connect two states by defining the source, destination, and interpolation time between them, ensuring smooth changes between animations.
+Clips store a reference to the original animation resource along with playback parameters such as looping and, in the future, playback speed.</p>
+
+<p><strong>State Machine Editor Creation</strong></p>
+
+<p>The State Machine Editor is responsible for allowing the creation, editing, and deletion of the elements listed in the State Machine Resource through a graphical interface using ImNodeFlow.</p>
+
+<p>The editor enables the visual construction of the state machine, where each node represents an animation state and the connections between them represent transitions. Through this interface, users can add new states, assign an animation clip to each, and define their position within the graph.</p>
+
+<p>When a new state machine is created, a default node is automatically generated, serving as the base for building the rest of the machine. Transitions can be created by connecting one state to another, specifying the triggers that activate them and the interpolation times between animations.</p>
+
+<p>The State Machine Editor is linked to both the State Machine Manager and the State Machine Resource. Every time a change is made to a state, clip, or transition, the resource is updated. When the user saves the state machine, it is stored through the <strong>State Machine Manager</strong>.</p>
+
+<p><strong>Save and Load Functionalities</strong></p>
+
+<p>When saving a state machine, it connects to the <strong>State Machine Manager</strong>. During this sprint, I focused on refining the saving and loading methods for state machines.</p>
+
+<p>In the saving process, the internal data of the state machine is converted into a hierarchical structure that includes unique identifiers, the resource name, and all other relevant elements.</p>
+
+<p>Once this structure is created and stored in a JSON file, corresponding files are generated both in the project’s asset folder and in its internal library, along with the necessary metadata file.</p>
+
+<p>During the loading process, the operation is reversed: the file associated with the previously saved state machine is opened, its JSON analyzed, and the objects reconstructed from it.</p>
+
+<p>I also added functionalities to query all existing state machines, list them when opening the editor, or retrieve the UID of a state machine simply by its name.</p>
+
+<p><strong>State Machine Inspector</strong></p>
+
+<p>In addition to the graph, I added a side inspector that displays the properties of the selected node — for instance, the associated clip, which can be selected via a dropdown connected to the list of available animations.</p>
+
+<p>The inspector also allows toggling whether the clip loops or not, and viewing the transitions linked to that state.</p>
+
+<p>As with the graph, any change — such as modifying the animation or toggling the loop setting — is directly connected to the State Machine Resource, which updates the corresponding data.</p>
+
+<p><strong>Trigger Creation and Saving.</strong></p>
+
+<p>Once both the editor and inspector were functional, I worked on implementing the trigger system.</p>
+
+<p>I added an inspector panel where users can add <strong>triggers</strong> with any names they wish. Once created, these are added to a list stored in the State Machine Resource and become available for selection within the state machine inspector.</p>
+
+<p>There, with the transitions already listed, I added a dropdown containing the saved triggers so that users can easily assign a trigger to each transition.</p>
+
+<p>After integrating triggers into both the editor and resource, I also needed to ensure they were saved properly, so I modified the State Machine Manager to store the triggers associated with each state machine.</p>
+
+<p><strong>Link State Machine to the Animation Component</strong></p>
+
+<p>Once the state machine system was completed, the next step was to make it actually execute animations.</p>
+
+<p>To achieve this, I added a dropdown in the Animation Component allowing users to select which state machine to link. Once linked, the triggers stored in the state machine appear as buttons, allowing transitions to be activated without relying on code — simply by pressing the trigger button.</p>
+
+<p>After this, I made the necessary modifications to the <strong>Animation Component</strong>:
+If the component has an associated state machine, it will execute the animation currently active within that machine. Thus, when playing the animation component, the active animation from the state machine is shown, and pressing the trigger associated with a transition will smoothly move to the next animation.</p>
+
+<p><strong>Implement Interpolation</strong></p>
+
+<p>After implementing animation switching via the state machine, it was important to ensure proper interpolation between them.</p>
+
+<p>For this, I used the existing interpolation system between keyframes of a single animation as a base to implement blending between two separate animations.</p>
+
+<p>In general terms, if there is an active transition toward another animation, the system <strong>calculates the blend weight between both and combines the results of position, rotation, and scale from the relevant channels, producing a progressive interpolation for a smooth transition</strong>.
+Once the transition finishes, the target animation becomes the primary one, and the previous animation is released. If an animation reaches its end and is not set to loop, playback stops automatically.</p>
+
+<p>Pablo García, Engine Programmer at Centuria Games</p>]]></content><author><name></name></author><category term="Celtic" /><category term="Development" /><summary type="html"><![CDATA[This blog post outlines the workflow to create state machines for our custom game engine, from the process to create clips and save them, to create triggers and the inspector. Prepared by one of our team programmers Pablo García , UPC student specializing in engine programming.]]></summary></entry><entry><title type="html">A Look Into Our Engine: Batching</title><link href="http://localhost:4000/CenturiaGames/2025/11/04/Batching/" rel="alternate" type="text/html" title="A Look Into Our Engine: Batching" /><published>2025-11-04T00:00:00+01:00</published><updated>2025-11-04T00:00:00+01:00</updated><id>http://localhost:4000/CenturiaGames/2025/11/04/Batching</id><content type="html" xml:base="http://localhost:4000/CenturiaGames/2025/11/04/Batching/"><![CDATA[<p>This blog post outlines the creation workflow of the Batching we use inside our custom engine. Prepared by Lead Gameplay Programmer Marc Casanova Torrequebrada, UPC student specializing in game programming.</p>
+<h3 id="introduction">Introduction</h3>
+
+<p>What’s the problem?</p>
+<ul>
+  <li>We want to create many different objects, each with different materials, textures, etc., regardless of the size of the mesh.</li>
+</ul>
+
+<p>For each asset, the engine creates a new Vertex Buffer Object (VBO), Element Buffer Object (EBO), and Vertex Array Object (VAO). Each unique VAO, VBO and EBO results in a separate draw call.</p>
+
+<p>What is the CPU cost of rendering a scene with 100,000 triangles distributed across 100 meshes of 1,000 triangles each?</p>
+
+<p>The cost of each draw call includes:
+○ Setting the VAO 
+○ Setting the model matrix uniform 
+○ Binding the material
+○ Binding textures 
+○ Issuing the draw command</p>
+
+<p>How can we optimize driver overhead?</p>
+<ul>
+  <li>By packing meshes into large buffer batches, we can reduce the number of draw calls, ideally rendering them all in a single call, or in as few calls as possible.</li>
+</ul>
+
+<p>That is the idea behind <strong>Batching</strong>.</p>
+
+<h3 id="approach">Approach</h3>
+
+<p>Create a new <strong>Geometry Batch</strong> class to store all geometry data from multiple meshes.</p>
+
+<p>For this Geometry Batch class, we need:</p>
+<ul>
+  <li>A list of all mesh components in the batch</li>
+  <li>A list of all unique resource meshes</li>
+  <li>A single VBO containing vertex data concatenated from all resource meshes</li>
+  <li>A single EBO containing index data concatenated from all resource meshes</li>
+  <li>A VAO defining the input layout for the batch</li>
+</ul>
+
+<p>A mesh is assigned to a Geometry Batch if matches all of the following features (examples):</p>
+<ul>
+  <li>Draw mode</li>
+  <li>Metallic property</li>
+  <li>Bones</li>
+  <li>Double-sided flag</li>
+  <li>Transparency</li>
+  <li>Wind effect</li>
+</ul>
+
+<p>If a mesh does not match any existing Geometry Batch, a new batch will be created.</p>
+
+<p>At the start of each level, when the scene is loaded with its Game Objects and their respective mesh components, we request a batch for each mesh. This is where a new class, the <strong>Batch Manager</strong>, becomes relevant.</p>
+
+<p>The <strong>Batch Manager</strong> is responsible for handling all Geometry Batches. It can request, create, remove, load, unload, and render batches as needed, centralizing the management of batched geometry and ensuring efficient rendering.</p>
+
+<p>Once all meshes from the scene have been assigned to their corresponding batches, we proceed to load the data required for rendering each batch.
+During this process, we keep track of the total number of components, unique meshes, materials, and models matrices.
+We also populate all the GPU buffers necessary for rendering, ensuring that the GPU has the exact memory layout of positions, tangents, normals, texture coordinates, joints, weights, and indices.</p>
+
+<p>Now that everything is set up, we can start rendering!
+The camera’s frustum culling determines which meshes need to be drawn each frame, allowing the Batch Manager to call only those Geometry Batches that contain at least one visible mesh. Each mesh component knows which Geometry Batch it belongs to.</p>
+
+<p><img src="/CenturiaGames/assets/images/article2/batching01.png" /></p>
+
+<p>Once the visible meshes are identified, the Batch Manager groups them by their corresponding Geometry Batch and prepares them for rendering.
+For each batch, the appropriate shader program is selected based on its properties, such as metallic/specular workflow, transparency, or wind effects.
+Global data, including camera matrices and render settings, is then sent to the GPU.</p>
+
+<p>Finally, each Geometry Batch is rendered only once, efficiently drawing all visible meshes together while keeping track of total vertices, triangles, and draw calls for performance monitoring.</p>
+
+<p>Well, we have explained the new workflow that batching requires, but how do we send all this information to the GPU, and how do we update the buffers in real-time?</p>
+
+<p>Once the visible meshes are determined, each Geometry Batch prepares <strong>draw commands</strong> and updates <strong>per-instance data</strong> just before rendering. Each visible mesh component generates a command specifying how it should be drawn: the number of indices, the number of instances, offsets in the combined vertex and index buffers, and the <strong>instance index</strong> pointing to its model, bones, and material data stored in the Shader Storage Buffer Object <strong>(SSBO)</strong>. This allows the shader to access per-instance information while rendering multiple meshes in a single draw call.</p>
+
+<p><img src="/CenturiaGames/assets/images/article2/batching02.png" /></p>
+
+<p>To handle dynamic data such as model matrices, bones transforms, or material matrices, we use double-buffered SSBOs. One buffer is used for rendering the previous frame, while the other is mapped for CPU updates with the current frame data. Once the updates are complete, the buffers are swapped. This ensures that the GPU never reads from a buffer that is being written to, preventing data corruption or stalls and allowing smooth, real-time updates.</p>
+
+<p>Using two buffers requires careful management of when we can swap them. To handle this, we use <strong>CPU-GPU synchronization with fences</strong>, so the CPU only waits if the GPU is still using the buffer we want to write to. This ensures that all dynamic per-instance data is safely updated each frame, while the draw commands stored in the <strong>indirect draw buffer</strong> can efficiently render all meshes in a batch with a single draw call.</p>
+
+<p>And with this system in place, batching is fully implemented and operational in our Sobrassada Engine!</p>
+
+<p>Marc Casanova Torrequebrada, Lead Gameplay Programmer at Centuria Games</p>]]></content><author><name></name></author><category term="Celtic" /><category term="Development" /><summary type="html"><![CDATA[This blog post outlines the creation workflow of the Batching we use inside our custom engine. Prepared by Lead Gameplay Programmer Marc Casanova Torrequebrada, UPC student specializing in game programming. Introduction]]></summary></entry><entry><title type="html">Making of Our Main Character: Cu Chulainn!</title><link href="http://localhost:4000/CenturiaGames/2025/10/19/making-of-cu/" rel="alternate" type="text/html" title="Making of Our Main Character: Cu Chulainn!" /><published>2025-10-19T00:00:00+02:00</published><updated>2025-10-19T00:00:00+02:00</updated><id>http://localhost:4000/CenturiaGames/2025/10/19/making-of-cu</id><content type="html" xml:base="http://localhost:4000/CenturiaGames/2025/10/19/making-of-cu/"><![CDATA[<p>This blog post outlines the creation workflow developed within the program for our
 final game project. Prepared by Lead Artist Elizabeth Guerrero Mendoza, UPC student
 specializing in technical art.</p>
 
