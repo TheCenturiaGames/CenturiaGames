@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer-left">
         <div style="display: inline-block">
-            <img src="/CenturiaGames/assets/images/logo_monochrome.png" style="height: 60px">
+        <div id="wolf_placeholder"></div>
         </div>
         <div style="display: inline-block">
             <h2>Centuria Games</h2>
@@ -62,4 +62,13 @@
         })();
     </script>
     <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
+
+    <script>
+  const menu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-list');
+
+  menu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
   </footer>

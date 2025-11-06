@@ -5,8 +5,10 @@
   <title>About - Centuria Games</title>
   <link rel="stylesheet" href="/CenturiaGames/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+   <script src="/CenturiaGames/scripts/big_canvas.js"></script>
 </head>
 <body>
+  <body onload="on_body_load()">
   <div class="page-container">
     <head>
   <meta charset="UTF-8">
@@ -15,8 +17,11 @@
   <link href="/CenturiaGames/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 </head>
 
-<nav>
-  <ul>
+<nav class="navbar">
+  <div class="menu-toggle" id="mobile-menu">
+    ☰
+  </div>
+  <ul class="nav-list">
     <li><a href="/CenturiaGames/index.html">Index</a></li>
     <li><a href="/CenturiaGames/about.html">About</a></li>
     <li><a href="/CenturiaGames/team.html">Team</a></li>
@@ -32,6 +37,7 @@
     <main>
       <section class="about-section">
   <h1 class="about-title">Who We Are</h1>
+   <img src="/CenturiaGames/assets/images/people/Teambg.jpg" class="teamImg">
 
   <div class="about-grid">
     <div class="about-card">
@@ -66,13 +72,13 @@
       </p>
     </div>
   </div>
-  <img src="/CenturiaGames/assets/images/people/Teambg.jpg" class="teamImg">
+ 
 </section>
     </main>
     <footer class="footer">
     <div class="footer-left">
         <div style="display: inline-block">
-            <img src="/CenturiaGames/assets/images/logo_monochrome.png" style="height: 60px">
+        <div id="wolf_placeholder"></div>
         </div>
         <div style="display: inline-block">
             <h2>Centuria Games</h2>
@@ -133,6 +139,15 @@
         })();
     </script>
     <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
+
+    <script>
+  const menu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-list');
+
+  menu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
   </footer>
   </div>
 

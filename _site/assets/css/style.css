@@ -717,24 +717,97 @@ h2 {
   height: 24px;
 }
 #wolf_placeholder {
-  position: relative;
-  top: -130px; 
-  margin-bottom: 0;
+  width: 120px; 
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
 }
 
 .download-link:hover {
   background-color: #2b2b2b;
   transform: scale(1.05);
 }
+.navbar {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none; 
+}
+
+
+.video-background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  display: block;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .video-background-video {
+    display: none;
+  }
+  .video-background {
+    background-image: url('/CenturiaGames/assets/images/Load_5_mourning2.png');
+  }
+}
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    padding: 0.5em;
+    .video-background-video {
+    display: none;
+  }
+  .video-background {
+    background-image: url('/CenturiaGames/assets/images/ember.gif');
   }
 
-  nav ul li {
-    margin: 0.5em 0;
+.menu-toggle {
+     display: block;
+    padding: 1rem;
+    background-color: rgba(20, 20, 20, 0.8);
+  }
+  
+ .nav-list {
+  display: none;
+    flex-direction: column;
+    background-color: rgba(20, 20, 20, 0.95);
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0; 
+  }
+
+  .nav-list.active {
+    display: flex;
   }
 
   .hero-content h1 {
@@ -800,6 +873,9 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    .video-background-video {
+    display: none;
+  }
   .engine-card {
     flex-direction: column; 
     text-align: center;
@@ -843,6 +919,9 @@ h2 {
 
 /* Responsive behavior */
 @media (max-width: 768px) {
+    .video-background-video {
+    display: none;
+  }
   .press-kit-container {
     flex-direction: column-reverse; /* stack vertically, reverse order */
   }
@@ -863,7 +942,8 @@ h2 {
 .teamImg{
   width: 70%;
   height: 100%;
-  margin-top: 150px;
+   margin-top: 150px;
+  margin-bottom: 150px;
 }
 .ost-container {
   display: flex;
@@ -884,6 +964,9 @@ h2 {
   flex: 1;
 }
 /* Responsive behavior */
+  .video-background-video {
+    display: none;
+  }
 @media (max-width: 950px) {
   .ost-container {
     flex-direction: column-reverse; /* stack vertically, reverse order */

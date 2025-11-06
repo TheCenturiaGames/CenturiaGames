@@ -5,8 +5,10 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+   <script src="/CenturiaGames/scripts/big_canvas.js"></script>
 </head>
 <body>
+  <body onload="on_body_load()">
   <div class="page-container">
     {% include header.html %}
     <main>

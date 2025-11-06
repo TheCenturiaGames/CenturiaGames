@@ -18,34 +18,32 @@
   background-size: cover;"
 onload="on_body_load()">-->
 
-<body onload="on_body_load()">
-<video autoplay muted loop style="
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-  opacity: 0.6;">
+<div class = "video-background-video"><video autoplay muted loop>
   <source src="/CenturiaGames/assets/videos/main_intro.mp4" type="video/mp4">
-</video>
-  <nav>
-    <ul style="margin-bottom: 0">
-      <li><a href="/CenturiaGames/index.html">Index</a></li>
-      <li><a href="/CenturiaGames/about.html">About</a></li>
-      <li><a href="/CenturiaGames/team.html">Team</a></li>
-      <li><a href="/CenturiaGames/game.html">Game</a></li>
-      <li><a href="/CenturiaGames/engine.html">Engine</a></li>
-      <li><a href="/CenturiaGames/ost.html">OST</a></li>
-      <li><a href="/CenturiaGames/blog.html">Blog</a></li>
-      <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
-      <li><a href="/CenturiaGames/download.html">Download</a></li>
-    </ul>
-  </nav>
+</video></div>
+
+<body onload="on_body_load()">
+  <div class="video-background"></div>
+
+ <nav class="navbar">
+  <div class="menu-toggle" id="mobile-menu">
+    ☰
+  </div>
+  <ul class="nav-list">
+    <li><a href="/CenturiaGames/index.html">Index</a></li>
+    <li><a href="/CenturiaGames/about.html">About</a></li>
+    <li><a href="/CenturiaGames/team.html">Team</a></li>
+    <li><a href="/CenturiaGames/game.html">Game</a></li>
+    <li><a href="/CenturiaGames/engine.html">Engine</a></li>
+    <li><a href="/CenturiaGames/ost.html">OST</a></li>
+    <li><a href="/CenturiaGames/blog.html">Blog</a></li>
+    <li><a href="/CenturiaGames/press.html">Press Kit</a></li>
+    <li><a href="/CenturiaGames/download.html">Download</a></li>
+  </ul>
+</nav>
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div id="wolf_placeholder"></div>
     <div class="hero-content">
       <h1>Welcome to Centuria Games</h1>
       <p>Forging legends with code & creativity.</p>
@@ -88,7 +86,7 @@ onload="on_body_load()">-->
   <footer class="footer">
     <div class="footer-left">
       <div style="display: inline-block">
-        <img src="./assets/images/logo_monochrome.png" style="height: 60px">
+         <div id="wolf_placeholder"></div>
       </div>
       <div style="display: inline-block">
         <h2>Centuria Games</h2>
@@ -104,5 +102,13 @@ onload="on_body_load()">-->
   </footer>
   <script src = "assets/js/main.js"> </script>
   <script src="/CenturiaGames/lib/lightbox/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+  const menu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-list');
+
+  menu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
