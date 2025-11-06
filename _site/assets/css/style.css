@@ -22,16 +22,75 @@ main {
 }
 
 .footer {
- flex-shrink: 0;
+  flex-shrink: 0;
   margin-top: auto;
   background-color: #1a1a1a;
   color: #ccc;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
   font-family: 'Cinzel', serif;
   border-top: 1px solid #444;
+  gap: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  max-width: 100%; /* Quitar la limitación del 50% */
+}
+
+.footer-left h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+.footer-right a {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-right a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-right a:hover {
+  transform: scale(1.15);
+  filter: brightness(1.5);
+}
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-left h2 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-left p {
+    font-size: 0.8rem;
+  }
 }
 
 #lightboxOverlay {
@@ -1007,5 +1066,90 @@ h2 {
   }
   50% {
     transform: rotate(5deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .ost-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .ost-sidebar,
+  .ost-main {
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+  .ost-sidebar table {
+    width: 100%;
+  }
+  
+  .ost-sidebar td {
+    padding: 0.5rem 0;
+  }
+  
+  
+  .ost-sidebar audio {
+    width: 100%;
+    max-width: 250px;
+    height: 32px;
+  }
+  
+  
+  .ost-main img {
+    width: 200px !important;
+    max-width: 80% !important;
+    height: auto;
+  }
+  
+ 
+  .ost-main .about-card {
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+
+  .ost-main .about-card p {
+    margin: 0.5rem 0;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .ost-sidebar audio {
+    max-width: 200px;
+    height: 28px;
+  }
+  
+  .ost-main img {
+    width: 150px !important;
+  }
+  
+  .ost-main .about-card {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 950px) {
+  .ost-container {
+    flex-direction: column;
+  }
+  
+  .ost-sidebar,
+  .ost-main {
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+  
+  .ost-sidebar audio {
+    max-width: 300px;
   }
 }
