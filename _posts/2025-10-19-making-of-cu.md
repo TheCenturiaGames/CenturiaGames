@@ -50,14 +50,14 @@ okay before texturing.
 
 <img src="/CenturiaGames/assets/images/article1/image6.png">
 
-<img src="/CenturiaGames/assets/images/article1/image7.png">
 
 ### Baking
 For a better bake everything was arranged in explode.
 
 <img src="/CenturiaGames/assets/images/article1/image8.png">
 
-<img src="/CenturiaGames/assets/images/article1/image9.png">
+<img src="/CenturiaGames/assets/images/article1/image7.png">
+
 
 ### Texturing
 What zbrush to topogun, substance to photoshop, jumping from one to another. 
@@ -67,6 +67,8 @@ Substance Painter for polishing small details and review the PBRs (Physically-Ba
 Rendering) making sure the metal looks metallic, leather rough, etc. Also where I 
 made final tweaks, like giving him a meaner frown or simplifying the colors after 
 getting feedback.
+
+<img src="/CenturiaGames/assets/images/article1/image9.png">
 
 <img src="/CenturiaGames/assets/images/article1/imageA.png">
 
