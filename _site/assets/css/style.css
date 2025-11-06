@@ -770,24 +770,26 @@ h2 {
   min-height: 100%;
   z-index: -1;
   opacity: 0.6;
-  display: block;
+
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .video-background-video {
-    display: none;
+    display: block;
   }
   .video-background {
     background-image: url('/CenturiaGames/assets/images/Load_5_mourning2.png');
+      display: none;
   }
 }
 
 @media (max-width: 768px) {
     .video-background-video {
-    display: none;
+    display: block;
   }
   .video-background {
     background-image: url('/CenturiaGames/assets/images/ember.gif');
+    display: block;
   }
 
 .menu-toggle {
@@ -964,9 +966,7 @@ h2 {
   flex: 1;
 }
 /* Responsive behavior */
-  .video-background-video {
-    display: none;
-  }
+  
 @media (max-width: 950px) {
   .ost-container {
     flex-direction: column-reverse; /* stack vertically, reverse order */
