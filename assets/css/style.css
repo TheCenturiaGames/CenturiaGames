@@ -1012,8 +1012,8 @@ h2 {
 .teamImg{
   width: 70%;
   height: 100%;
-   margin-top: 150px;
-  margin-bottom: 150px;
+   margin-top: 10px;
+  margin-bottom: 40px;
 }
 .ost-container {
   display: flex;
